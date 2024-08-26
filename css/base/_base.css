@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*
+font-family: "Dancing Script", cursive;
+font-family: "Roboto", sans-serif;
+font-family: "Lora", serif;
+font-family: "Playfair Display", serif;
+*/
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInTop {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+:root{
+    --texto-padrao: 22px;
+    --cor-primaria: ;
+    --cor-secundaria: ;
+    --cor-terciaria: ;
+    --cor-quaternaria: rgb(72, 47, 47);
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    font-size: var(--texto-padrao);
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* -------- NAV ------- */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding-bottom: 5px;
+}
+
+#img-logo-precioso{
+    width: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:focus{
+    outline: none;
+}
+
+.menu-nav-ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    list-style-type: none;
+    align-self: flex-end;
+}
+
+.menu-nav-ul li a{
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu-nav-ul a:hover{
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+    transition: background-color 0.8s;
+    background-color: rgba(255, 255, 255, 0.63);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    color: black;
+}
+
+
+/* -------- BLOCO 1 ------- */
+.bloco-1{
+    background: linear-gradient(90deg, #1E1E1E -6.88%, rgba(0, 0, 0, 0.125) 87.45%), url(../../images/coffee_image.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    font-size: var(--texto-padrao);
+    flex-wrap: wrap;
+    min-height: 100vh;
+    opacity: 1;
+    animation: fadeIn 3s ease-in-out;
+}
+
+
+.conteudo-texto-esquerda{
+    width: 60%;
+    padding: 10px;
+    color: white;
+    animation: fadeIn 3.5s ease-in-out;
+}
+
+.conteudo-texto-esquerda p{
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+
+strong{
+    font-size: 46px;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.552);
+}
+
+/* -------- BLOCO 2 ------- */
+.bloco-2{
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+
+.bloco-2 h2{
+    text-align: center;
+}
+
+.div-imagem-esquerda{
+    width: 50%;
+    max-width: 500px;
+}
+
+.fade-in-left{
+    animation: fadeInLeft 2.2s both;
+}
+
+#img-cafe-bloco2{
+    width: 100%;
+}
+
+.conteudo-texto-direita{
+    color: rgb(72, 47, 47);
+    padding: 25px;
+}
+
+.fade-in{
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* -------- BLOCO 3 ------- */
+.bloco-3{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+}
+
+.bloco-3 h2{
+    color: rgb(72, 47, 47);
+    width: 100%;
+    text-align: center;
+}
+
+.card-deck{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+#div-icones-produtos{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.fade-in-top{
+    animation: fadeInTop 2s ease;
+}
+
+.div-icone-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 3%;
+}
+
+.img-icones-produtos{
+    width: 130px;
+    border-radius: 50%;
+    opacity: 40%;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+.img-icones-produtos:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.icone-produto-selecionado{
+    width: 130px;
+    border-radius: 50%;
+    opacity: 100%;
+}
+
+label{
+    font-size: 18px;
+    text-align: center;
+}
+
+.card-deck{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-hidden{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(72, 47, 47, 0.3);
+    border-radius: 16px;
+    min-width: 300px;
+    width: 50%;
+    text-align: center;
+}
+
+.card:hover{
+    background-color: rgba(116, 97, 97, 0.3);
+    transition: 0.4s;
+}
+
+.card img{
+    width: 50%;
+    border-radius: 16px;
+    opacity: 80%;
+}
+.card img:hover{
+    opacity: 100%;
+    transition: 0.4s;
+}
+
+.card-text{
+    margin: 0px 30px 15px 30px;
+    text-align: center;
+    color: var(--cor-quaternaria);
+    font-size: 20px;
+}
+
+#btn_wpp{
+    width: 50%;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.355);
+    background-color: rgb(37, 211, 102);
+    color: white;
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    padding: 14px 0px;
+}
+
+#btn_wpp:hover{
+    background-color: rgba(37, 211, 101, 0.73);
+    transition: background-color 0.2s;
+}
+
+#btn_wpp:link{
+    text-decoration: none;
+}
+
+#btn_wpp:visited { 
+    text-decoration: none; 
+}
+/* -------- BLOCO 4 - SOBRE NÓS ------- */
+.bloco-4{
+    background: linear-gradient(90deg, #1E1E1E -6.88%, rgba(0, 0, 0, 0.245) 87.45%), url(../../images/familia1.jpg);
+    width: 100%;
+    min-height: 100vh; /* 400px */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: white;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.divs-sobre-nos{
+    margin: 0% 20%;
+    border-radius: 25px;
+    
+}
+
+.divs-sobre-nos h3{
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+/* -------- FOOTER ------- */
+
+footer{
+    color: #6c6c6c;
+    padding: 0px 15px;
+    font-size: 16px;
+}
+
+.footer-informacoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-sobre, .footer-funcionamento, .footer-instagram{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 10px 0px;
+}
+
+footer h2{
+    padding-top: 15px;
+    color: #d8d8d8;
+}
+
+.footer-sobre-endereco{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+}
+
+.div-footer-icone{  
+    width: fit-content;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
+.footer-icone{
+    width: 30px;  
+}
+
+.footer-sobre-map img{
+    width: 90%;
+    border-radius: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-sobre-telefone{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+
+}
+
+.p-telefone{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#link-wpp{
+    color: #6c6c6c;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#link-wpp:link{
+    text-decoration: none;
+}
+#link-wpp:visited { 
+    text-decoration: none; 
+} 
+#link-wpp:hover { 
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+} 
+#link-wpp:active { 
+    text-decoration: none; 
+}
+
+#img-whatsapp-icon{
+    width: 18px;
+    padding-left: 10px;
+}
+
+.footer-funcionamento-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+
+.hora{
+    text-align: end;
+    padding-right: 5px;
+}
+
+.footer-instagram{
+    border-right: none;
+}
+
+.footer-instagram img{
+    width: 80%;
+}
+
+.credito{  
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.credito a{
+    color: #aeaeae;  
+}
+.credito a:link{
+    text-decoration: none;
+}
+
+.credito a:visited { 
+    text-decoration: none; 
+}
+.credito a:active { 
+    text-decoration: none; 
+}
+
+/* -------- MOBILE ------- */
+@media screen and (max-width: 767px) {
+    .menu-nav-ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-nav-ul.show{
+        display: flex;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    #div-icones-produtos img{
+        width: 100%;
+
+    }
+
+    .card{
+        flex-direction: column;
+        width: 90%;
+        margin: 1px 10px;
+    }
+
+    #btn_wpp{
+        width: 95%;
+    }
+
+    .footer-informacoes{
+        display: inline;
+    }
+    .footer-sobre{
+        display: flex;
+        flex-direction: column;
+    }
+}
